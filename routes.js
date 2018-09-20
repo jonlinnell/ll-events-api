@@ -1,10 +1,10 @@
-const { loadEvents } = require('./lib/events')
+const { fetchEvents } = require('./lib/events')
 const fetchNews = require('./lib/news')
 const getBusDepartures = require('./lib/getBusDepartures')
 
 const routes = (app) => {
   app.get('/events', (req, res) => {
-    loadEvents()
+    fetchEvents()
       .then(data => res.send(data))
   })
 
