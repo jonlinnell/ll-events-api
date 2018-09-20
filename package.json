@@ -1,7 +1,7 @@
 {
-  "name": "ll-events-api",
+  "name": "videowall-backend",
   "version": "0.1.0",
-  "description": "Scraper for LU London Events",
+  "description": "Backend functionality for the LL Video Wall software",
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./index.js",
