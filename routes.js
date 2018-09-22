@@ -1,5 +1,6 @@
 const { fetchEvents } = require('./lib/events')
 const fetchNews = require('./lib/news')
+const fetchTubeStatus = require('./lib/fetchTubeStatus')
 const getBusDepartures = require('./lib/getBusDepartures')
 const getRailDepartureBoard = require('./lib/getRailDepartureBoard')
 
@@ -12,6 +13,12 @@ const routes = (app) => {
   app.get('/news', (req, res) => {
     fetchNews()
       .then(data => res.json(data))
+  })
+
+  app.get('/tube', (req, res) => {
+    fetchTubeStatus()
+      .then(data => res.json(data))
+      .catch(error => res.status(500).send(`An error occurred loading the tube data: ${error}`))
   })
 
   app.get('/bus/:stopCode', (req, res) => {
