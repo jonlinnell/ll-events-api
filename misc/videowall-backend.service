@@ -1,0 +1,11 @@
+[Unit]
+Description=Videowall Backend service
+After=network-online.target
+
+[Service]
+Restart=on-failure
+WorkingDirectory=/opt/videowall-backend
+ExecStart=/usr/bin/env node /opt/videowall-backend/index.js
+
+[Install]
+WantedBy=multi-user.target
