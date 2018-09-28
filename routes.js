@@ -1,5 +1,5 @@
 const { fetchEvents } = require('./lib/events')
-const fetchNews = require('./lib/news')
+const fetchUniNews = require('./lib/fetchUniNews')
 const fetchTubeStatus = require('./lib/fetchTubeStatus')
 const getBusDepartures = require('./lib/getBusDepartures')
 const getRailDepartureBoard = require('./lib/getRailDepartureBoard')
@@ -10,8 +10,8 @@ const routes = (app) => {
       .then(data => res.send(data))
   })
 
-  app.get('/news', (req, res) => {
-    fetchNews()
+  app.get('/uniNews', (req, res) => {
+    fetchUniNews()
       .then(data => res.json(data))
   })
 
