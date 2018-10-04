@@ -27,23 +27,22 @@ const routes = (app) => {
       .catch(error => res.status(500).send(`An error occurred loading the tube data: ${error}`))
   })
 
-  app.get('/bus/:stopCode', (req, res) => {
-    const { stopCode } = req.params
+  app.get('/bus/:stopCode/:limit?', (req, res) => {
+    // const { stopCode, limit } = req.params
 
-    if (!stopCode) res.status(400).send('No stop code provided.')
+    if (!req.params.stopCode) res.status(400).send('No stop code provided.')
 
-    getBusDepartures(stopCode)
+    getBusDepartures(req.params)
       .then(data => res.json(data))
       .catch(error => res.status(500).send(`An error occurred loading the bus data: ${error}`))
   })
 
   app.get('/rail/:station/:destination?', (req, res) => {
-    const { station, destination } = req.params
+    // const { station, destination } = req.params
 
-    getRailDepartureBoard({
-      station,
-      destination,
-    })
+    if (!req.params.station) res.status(400).send('No station specified.')
+
+    getRailDepartureBoard(req.params)
       .then(data => res.json(data))
       .catch(error => res.status(500).send(error))
   })
