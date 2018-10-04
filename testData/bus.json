@@ -2,12 +2,12 @@
     {
         "destination": "Aldwych",
         "service": "87",
-        "eta": 2
+        "eta": 0
     },
     {
         "destination": "Trafalgar Square",
         "service": "3",
-        "eta": 6
+        "eta": 4
     },
     {
         "destination": "Aldwych",
