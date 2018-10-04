@@ -1,0 +1,47 @@
+[
+    {
+        "destination": "Aldwych",
+        "service": "87",
+        "eta": 2
+    },
+    {
+        "destination": "Trafalgar Square",
+        "service": "3",
+        "eta": 6
+    },
+    {
+        "destination": "Aldwych",
+        "service": "87",
+        "eta": 8
+    },
+    {
+        "destination": "Trafalgar Square",
+        "service": "3",
+        "eta": 12
+    },
+    {
+        "destination": "Aldwych",
+        "service": "87",
+        "eta": 16
+    },
+    {
+        "destination": "Trafalgar Square",
+        "service": "3",
+        "eta": 21
+    },
+    {
+        "destination": "Aldwych",
+        "service": "87",
+        "eta": 22
+    },
+    {
+        "destination": "Aldwych",
+        "service": "87",
+        "eta": 26
+    },
+    {
+        "destination": "Trafalgar Square",
+        "service": "3",
+        "eta": 26
+    }
+]

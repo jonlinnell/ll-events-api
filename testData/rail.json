@@ -1,0 +1,244 @@
+{
+    "trainServices": [
+        {
+            "std": "10:21",
+            "etd": "On time",
+            "operator": "Thameslink",
+            "operatorCode": "TL",
+            "serviceId": "655YK3eKWCE39gfVQ1ZxZA==",
+            "rsid": "TL131800",
+            "origin": {
+                "name": "London Kings Cross",
+                "crs": "KGX"
+            },
+            "destination": {
+                "name": "Letchworth Garden City",
+                "crs": "LET"
+            }
+        },
+        {
+            "std": "10:30",
+            "etd": "On time",
+            "operator": "London North Eastern Railway",
+            "operatorCode": "GR",
+            "serviceId": "QY+pvoG89XT3cyxtsGpn4A==",
+            "rsid": "GR622000",
+            "origin": {
+                "name": "London Kings Cross",
+                "crs": "KGX"
+            },
+            "destination": {
+                "name": "Edinburgh",
+                "crs": "EDB"
+            }
+        },
+        {
+            "std": "10:33",
+            "etd": "On time",
+            "operator": "London North Eastern Railway",
+            "operatorCode": "GR",
+            "serviceId": "hDks1/bBs7ZdYyip4XQzPA==",
+            "rsid": "GR220000",
+            "origin": {
+                "name": "London Kings Cross",
+                "crs": "KGX"
+            },
+            "destination": {
+                "name": "Leeds",
+                "crs": "LDS"
+            }
+        },
+        {
+            "std": "10:42",
+            "etd": "On time",
+            "operator": "Great Northern",
+            "operatorCode": "GN",
+            "serviceId": "W9sqGKN8qRjjvV9k/nvAuQ==",
+            "rsid": "GN107600",
+            "origin": {
+                "name": "London Kings Cross",
+                "crs": "KGX"
+            },
+            "destination": {
+                "name": "Kings Lynn",
+                "crs": "KLN"
+            }
+        },
+        {
+            "std": "10:51",
+            "etd": "On time",
+            "operator": "Thameslink",
+            "operatorCode": "TL",
+            "serviceId": "cEglC5XukaKrXQyhsH/lYw==",
+            "rsid": "TL132000",
+            "origin": {
+                "name": "London Kings Cross",
+                "crs": "KGX"
+            },
+            "destination": {
+                "name": "Cambridge North",
+                "crs": "CMB"
+            }
+        },
+        {
+            "std": "10:52",
+            "etd": "On time",
+            "operator": "Grand Central",
+            "operatorCode": "GC",
+            "serviceId": "aQwSJeJAJz4DXAzq4Mn1Rg==",
+            "rsid": "GC700000",
+            "origin": {
+                "name": "London Kings Cross",
+                "crs": "KGX"
+            },
+            "destination": {
+                "name": "Bradford Interchange",
+                "crs": "BDI"
+            }
+        },
+        {
+            "std": "11:00",
+            "etd": "On time",
+            "operator": "London North Eastern Railway",
+            "operatorCode": "GR",
+            "serviceId": "S8hbQH6W/EEipxRoxKqd2Q==",
+            "rsid": "GR624000",
+            "origin": {
+                "name": "London Kings Cross",
+                "crs": "KGX"
+            },
+            "destination": {
+                "name": "Edinburgh",
+                "crs": "EDB"
+            }
+        },
+        {
+            "std": "11:03",
+            "etd": "On time",
+            "operator": "London North Eastern Railway",
+            "operatorCode": "GR",
+            "serviceId": "2bgmPqqbrKitNUWKrzmYVw==",
+            "rsid": "GR222000",
+            "origin": {
+                "name": "London Kings Cross",
+                "crs": "KGX"
+            },
+            "destination": {
+                "name": "Leeds",
+                "crs": "LDS"
+            }
+        },
+        {
+            "std": "11:06",
+            "etd": "On time",
+            "operator": "London North Eastern Railway",
+            "operatorCode": "GR",
+            "serviceId": "MIrzTWJaW9XeWQaqkg5mYQ==",
+            "rsid": "GR426000",
+            "origin": {
+                "name": "London Kings Cross",
+                "crs": "KGX"
+            },
+            "destination": {
+                "name": "York",
+                "crs": "YRK"
+            }
+        },
+        {
+            "std": "11:12",
+            "etd": "On time",
+            "operator": "Great Northern",
+            "operatorCode": "GN",
+            "serviceId": "rMKuP1m8RzOwJKLvSZ+fTA==",
+            "rsid": "GN107800",
+            "origin": {
+                "name": "London Kings Cross",
+                "crs": "KGX"
+            },
+            "destination": {
+                "name": "Ely",
+                "crs": "ELY"
+            }
+        },
+        {
+            "std": "11:21",
+            "etd": "On time",
+            "operator": "Thameslink",
+            "operatorCode": "TL",
+            "serviceId": "7hEnGD7JiABXBy7YKrVJOQ==",
+            "rsid": "TL132200",
+            "origin": {
+                "name": "London Kings Cross",
+                "crs": "KGX"
+            },
+            "destination": {
+                "name": "Cambridge",
+                "crs": "CBG"
+            }
+        },
+        {
+            "std": "11:27",
+            "etd": "On time",
+            "operator": "Grand Central",
+            "operatorCode": "GC",
+            "serviceId": "lyM2DXwkhvZqm8Rm8M4otA==",
+            "rsid": "GC802000",
+            "origin": {
+                "name": "London Kings Cross",
+                "crs": "KGX"
+            },
+            "destination": {
+                "name": "Sunderland",
+                "crs": "SUN"
+            }
+        },
+        {
+            "std": "11:30",
+            "etd": "On time",
+            "operator": "London North Eastern Railway",
+            "operatorCode": "GR",
+            "serviceId": "qzv/W2R7kf0HZPCiCUl53g==",
+            "rsid": "GR628000",
+            "origin": {
+                "name": "London Kings Cross",
+                "crs": "KGX"
+            },
+            "destination": {
+                "name": "Edinburgh",
+                "crs": "EDB"
+            }
+        },
+        {
+            "std": "11:33",
+            "etd": "On time",
+            "operator": "London North Eastern Railway",
+            "operatorCode": "GR",
+            "serviceId": "j6/ojaWLHdC5kn9vgF0oFQ==",
+            "rsid": "GR224000",
+            "origin": {
+                "name": "London Kings Cross",
+                "crs": "KGX"
+            },
+            "destination": {
+                "name": "Leeds",
+                "crs": "LDS"
+            }
+        },
+        {
+            "std": "11:42",
+            "etd": "On time",
+            "operator": "Great Northern",
+            "operatorCode": "GN",
+            "serviceId": "HUbfplUm9kxqCYAHrZQKIQ==",
+            "rsid": "GN108000",
+            "origin": {
+                "name": "London Kings Cross",
+                "crs": "KGX"
+            },
+            "destination": {
+                "name": "Kings Lynn",
+                "crs": "KLN"
+            }
+        }
+    ]
+}
