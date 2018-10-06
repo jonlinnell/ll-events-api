@@ -6,6 +6,7 @@
     "operatorCode": "TL",
     "serviceId": "655YK3eKWCE39gfVQ1ZxZA==",
     "rsid": "TL131800",
+    "platform": 2,
     "origin": {
       "name": "London Kings Cross",
       "crs": "KGX"
@@ -22,6 +23,7 @@
     "operatorCode": "GR",
     "serviceId": "QY+pvoG89XT3cyxtsGpn4A==",
     "rsid": "GR622000",
+    "platform": 4,
     "origin": {
       "name": "London Kings Cross",
       "crs": "KGX"
@@ -38,6 +40,7 @@
     "operatorCode": "GR",
     "serviceId": "hDks1/bBs7ZdYyip4XQzPA==",
     "rsid": "GR220000",
+    "platform": "1a",
     "origin": {
       "name": "London Kings Cross",
       "crs": "KGX"
