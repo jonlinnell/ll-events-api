@@ -1,7 +1,7 @@
 [
   {
     "std": "10:21",
-    "etd": "On time",
+    "etd": "10:30",
     "operator": "Thameslink",
     "operatorCode": "TL",
     "serviceId": "655YK3eKWCE39gfVQ1ZxZA==",
@@ -35,7 +35,7 @@
   },
   {
     "std": "10:33",
-    "etd": "On time",
+    "etd": "Cancelled",
     "operator": "London North Eastern Railway",
     "operatorCode": "GR",
     "serviceId": "hDks1/bBs7ZdYyip4XQzPA==",
@@ -52,7 +52,7 @@
   },
   {
     "std": "10:42",
-    "etd": "On time",
+    "etd": "Delayed",
     "operator": "Great Northern",
     "operatorCode": "GN",
     "serviceId": "W9sqGKN8qRjjvV9k/nvAuQ==",
