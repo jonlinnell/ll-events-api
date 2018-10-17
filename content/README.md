@@ -9,8 +9,11 @@ This is a *temporary* measure while a proper admin solution is implemented.
 ### content.json
 ```JSON
 {
-  "contentType": [image],
+  "contentType": [image|youtube],
   "content": "<content>"
 }
 ```
-For `contentType: image` , `content` is expected to be a path to a PNG file on the local filesystem.
+
+### Expected `content` for `contentType`
+* 'image' expects a path to a PNG file on the filesystem. Paths are relative to the /content directory
+* 'youtube' expects a YouTube video ID, such as 'aQznGdfFPz4' (i.e. the code after ?v= in a YouTube URL.)
