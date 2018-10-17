@@ -4,6 +4,7 @@ const fetchTubeStatus = require('./lib/fetchTubeStatus')
 const fetchHeadlines = require('./lib/fetchHeadlines')
 const getBusDepartures = require('./lib/getBusDepartures')
 const getRailDepartureBoard = require('./lib/getRailDepartureBoard')
+const get3x3content = require('./lib/get3x3content')
 
 const routes = (app) => {
   app.get('/events', (req, res) => {
@@ -43,6 +44,12 @@ const routes = (app) => {
     if (!req.params.station) res.status(400).send('No station specified.')
 
     getRailDepartureBoard(req.params)
+      .then(data => res.json(data))
+      .catch(error => res.status(500).send(error))
+  })
+
+  app.get('/update3x3', (req, res) => {
+    get3x3content()
       .then(data => res.json(data))
       .catch(error => res.status(500).send(error))
   })
