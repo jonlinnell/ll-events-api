@@ -3,3 +3,5 @@ node_modules/
 .DS_Store
 content/*
 !content/README.md
+certs/
+data.dev.db
