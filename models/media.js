@@ -9,6 +9,10 @@ module.exports = (sequelize, DataTypes) => sequelize.define('media', {
     allowNull: false,
     unique: true,
   },
+  mimetype: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
   active: {
     type: DataTypes.BOOLEAN,
     allowNull: false,

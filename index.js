@@ -41,7 +41,7 @@ require('./routes/media')(app)
 
 /* Database functions */
 
-media.sync({ force: true })
+media.sync()
   .catch((err) => { throw new Error(err) })
 
 /* Start the server */
