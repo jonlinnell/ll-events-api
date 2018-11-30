@@ -6,7 +6,7 @@ const https = require('https')
 const fs = require('fs')
 const { resolve } = require('path')
 
-const { media } = require('./models')
+const { media, settings } = require('./models')
 
 /* CONFIG DEFINITIONS */
 
@@ -38,10 +38,14 @@ app.use(cors({
 
 require('./routes')(app)
 require('./routes/media')(app)
+require('./routes/settings')(app)
 
 /* Database functions */
 
 media.sync()
+  .catch((err) => { throw new Error(err) })
+
+settings.sync()
   .catch((err) => { throw new Error(err) })
 
 /* Start the server */
