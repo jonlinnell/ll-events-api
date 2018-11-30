@@ -5,6 +5,7 @@ const {
   getMedia,
   getMediaMetadataById,
   pruneMediaFiles,
+  updateMediaById,
 } = require('../lib/media')
 
 const PREFIX = '/media'
@@ -48,6 +49,12 @@ const routes = (app) => {
 
   app.delete(`${PREFIX}/:id`, (req, res) => {
     deleteMediaById(req.params.id)
+      .then(data => res.json(data))
+      .catch(error => res.status(500).send(`Error: ${error}`))
+  })
+
+  app.put(`${PREFIX}/:id`, (req, res) => {
+    updateMediaById(req.params.id, req.body)
       .then(data => res.json(data))
       .catch(error => res.status(500).send(`Error: ${error}`))
   })
