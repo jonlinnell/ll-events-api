@@ -1,5 +1,6 @@
 const {
   addMedia,
+  deleteMediaById,
   getActiveMediaMetadata,
   getMedia,
   getMediaMetadataById,
@@ -41,6 +42,12 @@ const routes = (app) => {
 
   app.get(`${PREFIX}/metadata/:id`, (req, res) => {
     getMediaMetadataById(req.params.id)
+      .then(data => res.json(data))
+      .catch(error => res.status(500).send(`Error: ${error}`))
+  })
+
+  app.delete(`${PREFIX}/:id`, (req, res) => {
+    deleteMediaById(req.params.id)
       .then(data => res.json(data))
       .catch(error => res.status(500).send(`Error: ${error}`))
   })
