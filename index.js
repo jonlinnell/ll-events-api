@@ -1,4 +1,7 @@
 #!/usr/bin/env node
+
+require('dotenv').config()
+
 const express = require('express')
 const cors = require('cors')
 const fileupload = require('express-fileupload')
@@ -9,8 +12,6 @@ const { resolve } = require('path')
 const { media, settings } = require('./models')
 
 /* CONFIG DEFINITIONS */
-
-require('dotenv').config()
 
 const app = express()
 
