@@ -37,7 +37,7 @@ app.use(cors({
   origin: ALLOWED_ORIGINS ? ALLOWED_ORIGINS.split(',') : true,
 }))
 
-require('./routes')(app)
+require('./routes/feeds')(app)
 require('./routes/media')(app)
 require('./routes/settings')(app)
 
@@ -51,6 +51,6 @@ settings.sync()
 
 /* Start the server */
 
-if (process.env.USE_TEST_DATA) { console.log('Using test data. Unset USE_TEST_DATA to use live feeds.') }
+if (process.env.USE_TEST_DATA) { process.stdout.write('Using test data. Unset USE_TEST_DATA to use live feeds.\n') }
 
-https.createServer(serverConfig, app).listen(port, () => console.log(`Listening on port ${port}`)) /* eslint-disable-line no-console */
+https.createServer(serverConfig, app).listen(port, () => process.stdout.write(`Listening on port ${port}\n`))
