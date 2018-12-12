@@ -12,8 +12,8 @@ const {
 
 const dbConfig = {
   development: {
-    dialect: 'sqlite',
-    storage: path.resolve(`${__dirname}/../data.dev.db`),
+    dialect: 'mysql',
+    host: DB_HOST,
   },
   production: {
     dialect: 'mysql',
@@ -22,6 +22,8 @@ const dbConfig = {
 }
 
 const db = {}
+
+console.log(DB_NAME)
 
 const sequelize = new Sequelize(DB_NAME, DB_USER, DB_PASS, dbConfig[NODE_ENV || 'development'])
 
