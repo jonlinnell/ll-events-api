@@ -6,3 +6,4 @@ content/*
 certs/
 data.dev.db
 yarn-error.log
+.nyc_output

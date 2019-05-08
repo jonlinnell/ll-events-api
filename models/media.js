@@ -13,6 +13,7 @@ const mediaSchema = new Schema({
   mimetype: {
     type: String,
     required: true,
+    enum: ['image/jpeg', 'image/png'],
   },
 })
 

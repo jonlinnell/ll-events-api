@@ -4,8 +4,16 @@
       "semi": [2, "never"],
       "no-underscore-dangle": ["error", { "allow": ["_id"] }]
     },
-    "plugins": ["jest"],
+    "plugins": ["mocha"],
     "env": {
-      "jest/globals": true
-    }  
+      "mocha": true
+    },
+    "overrides": [
+      {
+          "files": "*.spec.js",
+          "rules": {
+              "no-unused-expressions": "off"
+          }
+      }
+  ]
 }
