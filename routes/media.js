@@ -4,9 +4,10 @@ const {
   getActiveMediaMetadata,
   getMedia,
   getMediaMetadataById,
-  pruneMediaFiles,
   updateMediaById,
 } = require('../lib/media')
+
+const { pruneMediaFiles } = require('../lib/mediaFiles')
 
 const PREFIX = '/media'
 
