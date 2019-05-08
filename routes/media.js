@@ -47,10 +47,24 @@ const routes = (app) => {
       .catch(error => res.status(500).send(error.message))
   })
 
-  app.delete(`${PREFIX}/:id`, (req, res) => {
-    deleteMediaById(req.params.id)
-      .then(data => res.json(data))
-      .catch(error => res.status(500).send(error.message))
+  app.delete(`${PREFIX}/:idString`, (req, res) => {
+    const { idString } = req.params
+
+    if (!idString || typeof idString !== 'string') res.status(400).send('No IDs specified.')
+
+    if (/,/.test(idString)) {
+      const ids = idString.split(',')
+
+      const deletionTasks = ids.map(id => deleteMediaById(id))
+
+      Promise.all(deletionTasks)
+        .then(result => res.json(result))
+        .catch(error => res.status(500).send(error.message))
+    } else {
+      deleteMediaById(idString)
+        .then(data => res.json(data))
+        .catch(error => res.status(500).send(error.message))
+    }
   })
 
   app.put(`${PREFIX}/:id`, (req, res) => {
