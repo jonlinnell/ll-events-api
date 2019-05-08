@@ -7,6 +7,9 @@ const cors = require('cors')
 const fileupload = require('express-fileupload')
 const mongoose = require('mongoose')
 
+const mediaRoutes = require('./routes/media')
+const feedsRoutes = require('./routes/feeds')
+
 /* CONFIG DEFINITIONS */
 
 const app = express()
@@ -26,8 +29,8 @@ app.use(
   }),
 )
 
-require('./routes/feeds')(app)
-require('./routes/media')(app)
+app.use('/feeds', feedsRoutes)
+app.use('/media', mediaRoutes)
 
 /* Start the server */
 
