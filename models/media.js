@@ -1,21 +1,25 @@
-module.exports = (sequelize, DataTypes) => sequelize.define('media', {
-  id: {
-    type: DataTypes.STRING,
-    primaryKey: true,
-    unique: true,
-  },
+const mongoose = require('mongoose')
+
+const { deleteMediaFiles } = require('../lib/mediaFiles')
+
+const { Schema } = mongoose
+
+const mediaSchema = new Schema({
   title: {
-    type: DataTypes.STRING,
-    allowNull: false,
+    type: String,
+    required: true,
     unique: true,
   },
   mimetype: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  active: {
-    type: DataTypes.BOOLEAN,
-    allowNull: false,
-    defaultValue: false,
+    type: String,
+    required: true,
   },
 })
+
+mediaSchema.post('findOneAndDelete', (media) => {
+  if (media) {
+    deleteMediaFiles(media._id, media.mimetype)
+  }
+})
+
+module.exports = mongoose.model('Media', mediaSchema)

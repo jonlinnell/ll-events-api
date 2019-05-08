@@ -5,3 +5,4 @@ content/*
 !content/README.md
 certs/
 data.dev.db
+yarn-error.log

@@ -5,26 +5,13 @@ require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
 const fileupload = require('express-fileupload')
-const https = require('https')
-const fs = require('fs')
-const { resolve } = require('path')
-
-const { media, settings } = require('./models')
+const mongoose = require('mongoose')
 
 /* CONFIG DEFINITIONS */
 
 const app = express()
 
-const {
-  ALLOWED_ORIGINS,
-  HTTPS_CERT,
-  HTTPS_KEY,
-} = process.env
-
-const serverConfig = {
-  key: fs.readFileSync(resolve(HTTPS_KEY), 'utf8'),
-  cert: fs.readFileSync(resolve(HTTPS_CERT), 'utf8'),
-}
+const { ALLOWED_ORIGINS, DBURI } = process.env
 
 const port = process.env.PORT || 3000
 
@@ -33,24 +20,27 @@ const port = process.env.PORT || 3000
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(fileupload())
-app.use(cors({
-  origin: ALLOWED_ORIGINS ? ALLOWED_ORIGINS.split(',') : true,
-}))
+app.use(
+  cors({
+    origin: ALLOWED_ORIGINS ? ALLOWED_ORIGINS.split(',') : true,
+  }),
+)
 
 require('./routes/feeds')(app)
 require('./routes/media')(app)
-require('./routes/settings')(app)
-
-/* Database functions */
-
-media.sync()
-  .catch((err) => { throw new Error(err) })
-
-settings.sync()
-  .catch((err) => { throw new Error(err) })
 
 /* Start the server */
 
-if (process.env.USE_TEST_DATA) { process.stdout.write('Using test data. Unset USE_TEST_DATA to use live feeds.\n') }
+mongoose.connect(DBURI, { useNewUrlParser: true }, (error) => {
+  if (error) {
+    throw new Error(error)
+  } else {
+    process.stdout.write('Connection to MongoDB established.\n')
+  }
+})
 
-https.createServer(serverConfig, app).listen(port, () => process.stdout.write(`Listening on port ${port}\n`))
+if (process.env.USE_TEST_DATA) {
+  process.stdout.write('Using test data. Unset USE_TEST_DATA to use live feeds.\n')
+}
+
+app.listen(port, () => process.stdout.write(`Listening on port ${port}\n`))

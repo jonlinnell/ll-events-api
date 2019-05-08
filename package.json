@@ -23,6 +23,7 @@
     "html-entities": "^1.2.1",
     "memory-cache": "^0.2.0",
     "moment-timezone": "^0.5.21",
+    "mongoose": "^5.4.17",
     "mysql2": "^1.6.4",
     "national-rail-darwin": "^1.0.6",
     "rss-parser": "^3.4.3",
