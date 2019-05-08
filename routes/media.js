@@ -3,6 +3,7 @@ const {
   deleteMediaById,
   getActiveMediaMetadata,
   getMedia,
+  getMediaData,
   getMediaMetadataById,
   updateMediaById,
 } = require('../lib/media')
@@ -15,6 +16,17 @@ const routes = (app) => {
   app.post(`${PREFIX}`, (req, res) => {
     addMedia(req)
       .then(data => res.json(data))
+      .catch(error => res.status(500).send(error.message))
+  })
+
+  app.get(`${PREFIX}/`, (req, res) => {
+    const { skip, limit } = req.query
+
+    getMedia({
+      skip,
+      limit,
+    })
+      .then(media => res.json(media))
       .catch(error => res.status(500).send(error.message))
   })
 
@@ -31,13 +43,13 @@ const routes = (app) => {
   })
 
   app.get(`${PREFIX}/:id`, (req, res) => {
-    getMedia(req.params.id)
+    getMediaData(req.params.id)
       .then(data => res.send(data))
       .catch(error => res.status(500).send(error.message))
   })
 
   app.get(`${PREFIX}/thumbnail/:id`, (req, res) => {
-    getMedia(req.params.id, true)
+    getMediaData(req.params.id, true)
       .then(data => res.send(data))
       .catch(error => res.status(500).send(error.message))
   })
