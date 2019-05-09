@@ -2,8 +2,8 @@ const { expect } = require('chai')
 
 const Media = require('../models/media')
 
-describe('Media model', () => {
-  it('should validate correct data', (done) => {
+describe('Media model', function () {
+  it('should validate correct data', function (done) {
     const media = new Media({ title: 'Test', mimetype: 'image/png' })
 
     media.validate((err) => {
@@ -12,7 +12,7 @@ describe('Media model', () => {
     })
   })
 
-  it('should give an error creating an entry without a title', (done) => {
+  it('should give an error creating an entry without a title', function (done) {
     const media = new Media({ mimetype: 'image/png' })
 
     media.validate((err) => {
@@ -21,7 +21,7 @@ describe('Media model', () => {
     })
   })
 
-  it('should give an error creating an entry with an invalid mimetype', (done) => {
+  it('should give an error creating an entry with an invalid mimetype', function (done) {
     const media = new Media({ tite: 'Not an image', mimetype: 'audio/mpeg' })
 
     media.validate((err) => {
@@ -30,7 +30,7 @@ describe('Media model', () => {
     })
   })
 
-  it('should give an error creating an empty entry', (done) => {
+  it('should give an error creating an empty entry', function (done) {
     const media = new Media({})
 
     media.validate((err) => {
