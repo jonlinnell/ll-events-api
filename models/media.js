@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const { deleteMediaFiles } = require('../lib/mediaFiles')
+const { deleteMediaFiles } = require('../lib/media/mediaFiles')
 
 const { Schema } = mongoose
 

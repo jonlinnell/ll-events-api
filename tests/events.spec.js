@@ -1,6 +1,6 @@
 const { expect } = require('chai')
 
-const { formatDate, scrubInput, coerceDate } = require('../lib/events')
+const { formatDate, scrubInput, coerceDate } = require('../lib/feeds/events')
 const testData = require('./testData/events.json')
 
 describe('lib/events.js', () => {

@@ -1,12 +1,12 @@
 const cache = require('memory-cache')
 const router = require('express').Router()
 
-const { fetchEvents } = require('../lib/events')
-const fetchUniNews = require('../lib/fetchUniNews')
-const fetchTubeStatus = require('../lib/fetchTubeStatus')
-const fetchHeadlines = require('../lib/fetchHeadlines')
-const getBusDepartures = require('../lib/getBusDepartures')
-const getRailDepartureBoard = require('../lib/getRailDepartureBoard')
+const { fetchEvents } = require('../lib/feeds/events')
+const fetchUniNews = require('../lib/feeds/fetchUniNews')
+const fetchTubeStatus = require('../lib/feeds/fetchTubeStatus')
+const fetchHeadlines = require('../lib/feeds/fetchHeadlines')
+const getBusDepartures = require('../lib/feeds/getBusDepartures')
+const getRailDepartureBoard = require('../lib/feeds/getRailDepartureBoard')
 
 const CACHE_PREFIX = 'vw'
 const CACHE_EVENTS = `${CACHE_PREFIX}-events`

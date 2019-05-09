@@ -10,7 +10,7 @@ const {
   updateMediaById,
 } = require('../lib/media')
 
-const { pruneMediaFiles } = require('../lib/mediaFiles')
+const { pruneMediaFiles } = require('../lib/media/mediaFiles')
 
 router.post('/', (req, res) => {
   addMedia(req)
