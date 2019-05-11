@@ -3,7 +3,7 @@ const { expect } = require('chai')
 const { formatDate, scrubInput, coerceDate } = require('../lib/feeds/events')
 const testData = require('./testData/events.json')
 
-describe('lib/events.js', function () {
+describe('lib/feeds/events.js', function () {
   describe('#formatDate()', function () {
     it('Should return a formatted date/time string', function () {
       const { date, time } = testData[0]
